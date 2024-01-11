@@ -1,1 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import "primeicons/primeicons.css";
+
+@layer tailwind-base, primeng, tailwind-utilities;
+
+@layer tailwind-base {
+  @tailwind base;
+}
+
+@layer tailwind-utilities {
+  @tailwind components;
+  @tailwind utilities;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  transition: all .2s ease;
+}
+
+.btn {
+  @apply rounded-full bg-gradient-to-t from-[#2e12cb] to-[#2575fc] hover:opacity-70 active:translate-y-[2px] text-white font-semibold;
+}

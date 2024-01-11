@@ -1,0 +1,40 @@
+<header class="w-full h-16 flex justify-between items-center shadow-md">
+  <div class="w-1/5">
+    <i
+      (click)="toggleSidebar()"
+      class="text-[#1a1a1a] text-xl pi pi-bars cursor-pointer ml-4"
+    ></i>
+  </div>
+  <div class="w-3/5 -ml-8 flex justify-center items-center">
+    <img src="../../../assets/logo.png" class="w-auto h-10" alt="" />
+  </div>
+  <div class="w-1/5 flex justify-evenly">
+    <button
+      class="btn px-8 py-1"
+      to="login"
+    >
+      Login
+    </button>
+    <button class="btn px-8 py-1">Registrar</button>
+  </div>
+</header>
+<p-sidebar [(visible)]="sidebarVisible">
+  <ng-template pTemplate="headless">
+    <div class="flex justify-between items-center gap-8 my-5 ml-4 mr-10">
+      <span>
+        <i
+          (click)="toggleSidebar()"
+          class="pi pi-times cursor-pointer text-[#1a1a1a] text-xl"
+        ></i>
+      </span>
+      <h3 class="font-semibold text-[#1a1a1a] text-xl">Menu</h3>
+    </div>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat.
+    </p>
+  </ng-template>
+</p-sidebar>
+<router-outlet></router-outlet>
