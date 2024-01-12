@@ -1,0 +1,13 @@
+:host::ng-deep {
+    .ui-chkbox-active {
+        background: #1e1e1e !important;
+        border: 2px solid #1e1e1e !important
+    }
+}
+.p-checkbox {
+    padding: 2px;
+    height: fit-content;
+    width: fit-content;
+    outline: 2px solid #1e1e1e !important;
+    border-radius: 8px;
+}

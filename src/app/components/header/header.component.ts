@@ -1,7 +1,7 @@
-import { Component } from "@angular/core";
+import { Component, NgModule } from "@angular/core";
 import { SidebarModule } from "primeng/sidebar";
 import { ButtonModule } from "primeng/button";
-import { RouterOutlet } from "@angular/router";
+import { Router, RouterOutlet } from "@angular/router";
 
 @Component({
   selector: "app-header",
@@ -14,5 +14,10 @@ export class HeaderComponent {
   sidebarVisible: boolean = false;
   toggleSidebar(): void {
     this.sidebarVisible = !this.sidebarVisible;
+  }
+  constructor(private router: Router) {}
+
+  navigateLogin() {
+    this.router.navigate(["/login"]);
   }
 }
